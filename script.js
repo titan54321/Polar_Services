@@ -2,69 +2,151 @@
 const WHATSAPP = "523521563476";
 
 const waLink = (message) => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`;
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-// ---------- Cotización rápida (inicio) ----------
+document.documentElement.classList.add("js");
 
-const quick = document.getElementById("quick");
-const quickBtn = document.getElementById("quick-btn");
-const quickLabel = document.getElementById("quick-label");
+// ---------- Inicio: de la calle soleada al minisplit ----------
 
-function updateQuick() {
-  // El valor ya trae su artículo: "la instalación", "el mantenimiento"
-  const servicio = new FormData(quick).get("servicio");
-  quickLabel.textContent = `Cotizar ${servicio.replace(/^(la|el) /, "")}`;
-  quickBtn.href = waLink(`Hola Polar, me gustaría cotizar ${servicio} de un aire acondicionado.`);
+const frames = [...document.querySelectorAll(".frame")];
+let current = 0;
+let timer;
+
+function nextFrame() {
+  frames[current].classList.remove("is-on");
+  current = (current + 1) % frames.length;
+  frames[current].classList.add("is-on");
 }
 
-quick.addEventListener("input", updateQuick);
-quick.addEventListener("submit", (event) => event.preventDefault());
-
-// ---------- Mensaje de cotización (contacto) ----------
-
-const form = document.getElementById("quote");
-const preview = document.getElementById("quote-text");
-const button = document.getElementById("quote-btn");
-
-function buildMessage() {
-  const data = new FormData(form);
-  const servicio = data.get("servicio");
-  const equipo = data.get("equipo");
-  const nombre = (data.get("nombre") || "").trim();
-
-  const inicio = nombre
-    ? `Hola Polar, soy ${nombre}. Me gustaría`
-    : "Hola Polar, me gustaría";
-
-  return `${inicio} cotizar ${servicio} de ${equipo}.`;
+function startFrames() {
+  if (reduceMotion || frames.length < 2) return;
+  clearInterval(timer);
+  timer = setInterval(nextFrame, 6000);
 }
 
-function update() {
-  const message = buildMessage();
-  preview.textContent = message;
-  button.href = waLink(message);
-}
-
-form.addEventListener("input", update);
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  update();
-  button.click();
+// Pausa cuando la pestaña no se ve
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) clearInterval(timer);
+  else startFrames();
 });
 
-// ---------- Entrada del inicio ----------
+startFrames();
 
-document.documentElement.classList.add("js-reveal");
-document.querySelectorAll(".reveal").forEach((el, i) => el.style.setProperty("--i", i));
-requestAnimationFrame(() => requestAnimationFrame(() => {
-  document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
-}));
+// ---------- Menú en el teléfono ----------
 
-// ---------- Menú con sombra al bajar ----------
+const menuToggle = document.querySelector(".menu-toggle");
+const menu = document.getElementById("menu");
 
-const nav = document.querySelector(".nav");
-const onScroll = () => nav.classList.toggle("is-scrolled", window.scrollY > 8);
-window.addEventListener("scroll", onScroll, { passive: true });
-onScroll();
+function setMenu(open) {
+  menu.classList.toggle("is-open", open);
+  menuToggle.setAttribute("aria-expanded", String(open));
+  menuToggle.textContent = open ? "Cerrar" : "Menú";
+}
+
+menuToggle.addEventListener("click", () => setMenu(!menu.classList.contains("is-open")));
+menu.addEventListener("click", (event) => { if (event.target.closest("a")) setMenu(false); });
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && menu.classList.contains("is-open")) {
+    setMenu(false);
+    menuToggle.focus();
+  }
+});
+
+// ---------- Servicios: la nota de cada servicio ----------
+
+const note = document.getElementById("service-note");
+const serviceItems = document.querySelectorAll(".group li");
+
+function showNote(item) {
+  serviceItems.forEach((li) => li.classList.toggle("is-active", li === item));
+  note.textContent = item.dataset.note;
+}
+
+serviceItems.forEach((item) => {
+  item.addEventListener("mouseenter", () => showNote(item));
+  item.addEventListener("focus", () => showNote(item));
+});
+
+// ---------- Equipo: capacidad según el cuarto y la medida ----------
+
+// Orientativo para clima caluroso; cocina y local suben un paso por el calor extra
+const SIZES = [
+  { big: "1 t", tons: "1 tonelada", btu: "12,000 BTU" },
+  { big: "1.5 t", tons: "1.5 toneladas", btu: "18,000 BTU" },
+  { big: "2 t", tons: "2 toneladas", btu: "24,000 BTU" },
+  { big: "+2 t", tons: "más de 2 toneladas", btu: "lo medimos en la visita" },
+];
+
+const sizer = document.getElementById("sizer");
+const resultBig = document.getElementById("result-big");
+const resultLine = document.getElementById("result-line");
+const sizerBtn = document.getElementById("sizer-btn");
+
+function updateSizer() {
+  const cuarto = sizer.querySelector('input[name="cuarto"]:checked');
+  const medida = sizer.querySelector('input[name="medida"]:checked');
+  const step = Math.min(Number(medida.dataset.step) + Number(cuarto.dataset.extra), SIZES.length - 1);
+  const size = SIZES[step];
+
+  resultBig.textContent = size.big;
+  resultLine.textContent = step === SIZES.length - 1
+    ? `Equipo de ${size.tons}: ${size.btu}`
+    : `Minisplit de ${size.tons}, ${size.btu}`;
+
+  if (!reduceMotion) {
+    resultBig.classList.remove("is-changing");
+    void resultBig.offsetWidth;
+    resultBig.classList.add("is-changing");
+  }
+
+  const equipo = step === SIZES.length - 1 ? "un equipo de más de 2 toneladas" : `un minisplit de ${size.tons} (${size.btu})`;
+  sizerBtn.href = waLink(`Hola Polar, me gustaría cotizar la instalación de ${equipo} para ${cuarto.value} de ${medida.value}.`);
+}
+
+sizer.addEventListener("change", updateSizer);
+updateSizer();
+
+// ---------- Cómo cotizar: acordeón ----------
+
+const stages = [...document.querySelectorAll(".stage")];
+
+function openStage(stage) {
+  stages.forEach((s) => {
+    const open = s === stage;
+    s.classList.toggle("is-open", open);
+    s.querySelector(".stage-tab").setAttribute("aria-expanded", String(open));
+    s.querySelector(".stage-body").hidden = !open;
+  });
+  const body = stage.querySelector(".stage-body");
+  body.setAttribute("tabindex", "-1");
+  body.focus({ preventScroll: true });
+}
+
+stages.forEach((stage) => {
+  stage.querySelector(".stage-tab").addEventListener("click", () => openStage(stage));
+});
+
+// ---------- Entradas al hacer scroll ----------
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.classList.add("is-in");
+      observer.unobserve(entry.target);
+    }
+  }, { rootMargin: "0px 0px -10% 0px" });
+
+  // El escalonado empieza de nuevo en cada sección
+  document.querySelectorAll("section").forEach((section) => {
+    section.querySelectorAll(".rise").forEach((el, i) => {
+      el.style.setProperty("--i", Math.min(i, 6));
+      observer.observe(el);
+    });
+  });
+} else {
+  document.querySelectorAll(".rise").forEach((el) => el.classList.add("is-in"));
+}
 
 // ---------- Año del pie de página ----------
 

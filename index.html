@@ -5,293 +5,285 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Polar · Aire acondicionado en La Piedad</title>
   <meta name="description" content="Polar: instalación, mantenimiento y reparación de aire acondicionado en La Piedad, Michoacán y alrededores. Cotiza por WhatsApp al 352 156 3476.">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#111111">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip" href="#contenido">Saltar al contenido</a>
 
-  <header class="nav">
-    <a href="#inicio" class="brand" aria-label="Polar, inicio">
-      <!-- Espacio para el logo: reemplaza el <span> por <img src="assets/img/logo.svg" alt="" height="40"> -->
-      <span class="logo-slot" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2v20M4.9 6.5l14.2 11M19.1 6.5 4.9 17.5M9.5 3.5 12 6l2.5-2.5M9.5 20.5 12 18l2.5 2.5"/></svg>
-      </span>
-      <span class="brand-name">Polar</span>
-    </a>
+  <!-- ---------- Inicio: POLAR sobre La Piedad ---------- -->
+  <header class="hero" id="inicio">
+    <div class="hero-frames" aria-hidden="true">
+      <img class="frame is-on" src="assets/img/la-piedad-santuario.jpg" width="1920" height="1440" alt="" fetchpriority="high">
+      <img class="frame" src="assets/img/hero-minisplit.jpg" width="2000" height="1333" alt="" loading="lazy">
+    </div>
 
-    <nav class="nav-links" aria-label="Principal">
-      <a href="#servicios">Servicios</a>
-      <a href="#porque">Por qué Polar</a>
-      <a href="#proceso">Cómo funciona</a>
-      <a href="#contacto">Contacto</a>
+    <nav class="topbar" aria-label="Principal">
+      <a href="#inicio" class="emblem" aria-label="Polar, inicio">
+        <!-- Espacio para el logo: reemplaza el <svg> por <img src="assets/img/logo.svg" alt="" height="32"> -->
+        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M12 2v20M4.9 6.5l14.2 11M19.1 6.5 4.9 17.5M9.5 3.5 12 6l2.5-2.5M9.5 20.5 12 18l2.5 2.5"/></svg>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+
+      <ul class="links" id="menu">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#cotizar">Cómo cotizar</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="tel:+523521563476" class="tel">352 156 3476</a></li>
+      </ul>
+
+      <a class="btn btn--paper topbar-action" href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20un%20servicio%20de%20aire%20acondicionado." target="_blank" rel="noopener">Cotizar<span class="sr-only"> por WhatsApp</span></a>
     </nav>
 
-    <a class="nav-phone" href="tel:+523521563476">352 156 3476</a>
-    <a class="btn btn--wa btn--sm" href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20un%20servicio%20de%20aire%20acondicionado." target="_blank" rel="noopener">
-      <svg class="wa-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><use href="#wa"/></svg>
-      Cotizar
-      <span class="sr-only">por WhatsApp</span>
-    </a>
+    <div class="hero-foot">
+      <p class="hero-line">Instalación, mantenimiento y reparación de aire acondicionado en La&nbsp;Piedad y alrededores.</p>
+      <a class="btn btn--paper hero-action" href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20un%20servicio%20de%20aire%20acondicionado." target="_blank" rel="noopener">
+        Cotizar por WhatsApp<span class="sr-only"> (se abre en WhatsApp)</span>
+      </a>
+      <h1 class="monument">Polar</h1>
+    </div>
   </header>
 
   <main id="contenido">
-    <!-- ---------- Inicio ---------- -->
-    <section id="inicio" class="hero">
-      <div class="hero-copy">
-        <h1 class="reveal">Aire acondicionado en La&nbsp;Piedad</h1>
-        <p class="hero-lead reveal">
-          Instalación, mantenimiento y reparación para casas y negocios.
-          Atención rápida, precios justos y garantía en cada instalación.
-        </p>
+    <!-- ---------- Servicios: índice en tres columnas ---------- -->
+    <section class="section services" id="servicios" aria-labelledby="servicios-titulo">
+      <h2 id="servicios-titulo" class="small-head rise">Servicios</h2>
 
-        <form class="quick reveal" id="quick" aria-label="Cotización rápida">
+      <div class="index">
+        <div class="group rise">
+          <h3><a href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20la%20instalaci%C3%B3n%20de%20un%20aire%20acondicionado." target="_blank" rel="noopener">Instalación</a></h3>
+          <ul>
+            <li tabindex="0" data-note="Equipos de muro, de una a dos toneladas, en recámaras, salas y locales.">Minisplit</li>
+            <li tabindex="0" data-note="Colocación en ventana o en muro, con su marco y sellado.">De ventana</li>
+            <li tabindex="0" data-note="Instalamos el equipo que compraste o te decimos cuál conviene.">Equipo nuevo</li>
+            <li tabindex="0" data-note="Retiramos el equipo viejo e instalamos el nuevo en el mismo lugar.">Cambio de equipo</li>
+            <li tabindex="0" data-note="Tubería de cobre con su aislamiento, del equipo a la condensadora.">Tubería y aislamiento</li>
+            <li tabindex="0" data-note="Base o soportes firmes para la unidad exterior.">Soportes y base</li>
+            <li tabindex="0" data-note="Antes de irnos probamos que el equipo enfríe bien.">Prueba de enfriamiento</li>
+          </ul>
+          <p class="sum">Dejamos tu equipo nuevo instalado y enfriando, con garantía.</p>
+        </div>
+
+        <div class="group rise">
+          <h3><a href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20el%20mantenimiento%20de%20un%20aire%20acondicionado." target="_blank" rel="noopener">Mantenimiento</a></h3>
+          <ul>
+            <li tabindex="0" data-note="Filtros limpios: el aire sale más frío y más limpio.">Limpieza de filtros</li>
+            <li tabindex="0" data-note="Lavado de los serpentines de la unidad interior y exterior.">Lavado de serpentines</li>
+            <li tabindex="0" data-note="Revisamos la presión del gas refrigerante con manómetros.">Revisión de gas</li>
+            <li tabindex="0" data-note="Destapamos y limpiamos la salida del agua para que no gotee.">Drenaje</li>
+            <li tabindex="0" data-note="Revisamos cables, conexiones y el capacitor.">Revisión eléctrica</li>
+            <li tabindex="0" data-note="Para casas y negocios que usan el aire todo el día.">Equipos de uso diario</li>
+          </ul>
+          <p class="sum">Un equipo limpio enfría mejor y no te falla cuando más calor hace.</p>
+        </div>
+
+        <div class="group rise">
+          <h3><a href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20la%20reparaci%C3%B3n%20de%20un%20aire%20acondicionado." target="_blank" rel="noopener">Reparación</a></h3>
+          <ul>
+            <li tabindex="0" data-note="Revisamos gas, filtros y compresor para encontrar la causa.">No enfría</li>
+            <li tabindex="0" data-note="Casi siempre es el drenaje o la instalación; lo corregimos.">Gotea agua</li>
+            <li tabindex="0" data-note="Ruidos del ventilador, del compresor o de piezas sueltas.">Hace ruido</li>
+            <li tabindex="0" data-note="Revisamos la parte eléctrica y la tarjeta del equipo.">No enciende</li>
+            <li tabindex="0" data-note="Suele ser suciedad acumulada; se resuelve con limpieza.">Huele mal</li>
+            <li tabindex="0" data-note="Puede ser el capacitor, el gas o un sensor.">Se apaga solo</li>
+          </ul>
+          <p class="sum">Te decimos qué tiene tu equipo y cuánto cuesta antes de repararlo.</p>
+        </div>
+
+        <p class="note" aria-live="polite" id="service-note">Equipos de muro, de una a dos toneladas, en recámaras, salas y locales.</p>
+      </div>
+    </section>
+
+    <!-- ---------- Fotos del oficio ---------- -->
+    <section class="photo-run" aria-label="Trabajo en equipos de aire acondicionado">
+      <figure class="rise">
+        <img src="assets/img/servicio-mantenimiento.jpg" width="1200" height="900" loading="lazy"
+             alt="Técnico conectando un manómetro a una unidad exterior de aire acondicionado">
+      </figure>
+      <figure class="rise">
+        <img src="assets/img/servicio-reparacion.jpg" width="1200" height="900" loading="lazy"
+             alt="Unidad exterior de aire acondicionado con el sol de la tarde">
+      </figure>
+    </section>
+
+    <!-- ---------- Equipo: lo vivo ---------- -->
+    <section class="section sizer" id="equipo" aria-labelledby="equipo-titulo">
+      <div class="sizer-copy">
+        <h2 id="equipo-titulo" class="head rise">¿Qué equipo necesitas?</h2>
+
+        <form class="sizer-form rise" id="sizer" aria-label="Calcular el equipo">
           <fieldset>
-            <legend>¿Qué necesitas?</legend>
-            <div class="chips">
-              <label class="chip"><input type="radio" name="servicio" value="la instalación" checked><span>Instalación</span></label>
-              <label class="chip"><input type="radio" name="servicio" value="el mantenimiento"><span>Mantenimiento</span></label>
-              <label class="chip"><input type="radio" name="servicio" value="la reparación"><span>Reparación</span></label>
+            <legend>El cuarto</legend>
+            <div class="choices">
+              <label><input type="radio" name="cuarto" value="una recámara" data-extra="0" checked><span>Recámara</span></label>
+              <label><input type="radio" name="cuarto" value="una sala" data-extra="0"><span>Sala</span></label>
+              <label><input type="radio" name="cuarto" value="una cocina" data-extra="1"><span>Cocina</span></label>
+              <label><input type="radio" name="cuarto" value="un local u oficina" data-extra="1"><span>Local u oficina</span></label>
             </div>
           </fieldset>
 
-          <div class="quick-actions">
-            <a id="quick-btn" class="btn btn--wa btn--lg"
-               href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20la%20instalaci%C3%B3n%20de%20un%20aire%20acondicionado."
-               target="_blank" rel="noopener">
-              <svg class="wa-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><use href="#wa"/></svg>
-              <span id="quick-label">Cotizar instalación</span>
-              <span class="sr-only">por WhatsApp (se abre en WhatsApp)</span>
-            </a>
-            <a class="call-link" href="tel:+523521563476">o llama al <strong>352 156 3476</strong></a>
-          </div>
+          <fieldset>
+            <legend>La medida</legend>
+            <div class="choices">
+              <label><input type="radio" name="medida" value="hasta 15 m²" data-step="0"><span>Hasta 15&nbsp;m²</span></label>
+              <label><input type="radio" name="medida" value="16 a 25 m²" data-step="1" checked><span>16–25&nbsp;m²</span></label>
+              <label><input type="radio" name="medida" value="26 a 35 m²" data-step="2"><span>26–35&nbsp;m²</span></label>
+              <label><input type="radio" name="medida" value="más de 35 m²" data-step="3"><span>Más de 35&nbsp;m²</span></label>
+            </div>
+          </fieldset>
         </form>
       </div>
 
-      <figure class="hero-media reveal">
-        <img
-          src="assets/img/hero-minisplit.jpg"
-          srcset="assets/img/hero-minisplit-movil.jpg 1000w, assets/img/hero-minisplit.jpg 2000w"
-          sizes="(max-width: 899px) 100vw, 50vw"
-          width="2000" height="1333"
-          alt="Minisplit blanco instalado en lo alto de una pared"
-          fetchpriority="high">
-        <figcaption>
-          <span>Minisplit</span>
-          <span>De ventana</span>
-          <span>Todas las marcas</span>
-        </figcaption>
-      </figure>
-    </section>
-
-    <ul class="promises" aria-label="Lo que ofrece Polar">
-      <li>
-        <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M12 3 4 6v6c0 4.4 3.4 8.3 8 9 4.6-.7 8-4.6 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
-        <span><strong>Garantía</strong> en cada instalación</span>
-      </li>
-      <li>
-        <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg>
-        <span><strong>Servicio</strong> a domicilio</span>
-      </li>
-      <li>
-        <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><rect x="3" y="5" width="18" height="9" rx="2"/><path d="M6 11h12M8 18l-1 2M12 17v3M16 18l1 2"/></svg>
-        <span><strong>Todas</strong> las marcas</span>
-      </li>
-      <li>
-        <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg>
-        <span><strong>Atención</strong> rápida</span>
-      </li>
-    </ul>
-
-    <!-- ---------- Servicios ---------- -->
-    <section id="servicios" class="section services" aria-labelledby="servicios-titulo">
-      <div class="section-head">
-        <h2 id="servicios-titulo">Servicios</h2>
-        <p>Minisplit y de ventana, de cualquier marca, en tu casa o en tu negocio.</p>
-      </div>
-
-      <div class="service-grid">
-        <article class="service">
-          <img src="assets/img/servicio-instalacion.jpg" width="1200" height="900" loading="lazy"
-               alt="Dos técnicos trabajando junto a varias unidades de aire acondicionado en una azotea">
-          <div class="service-body">
-            <h3>Instalación</h3>
-            <p>Instalamos tu equipo nuevo en el lugar correcto, con su tubería, soportes y conexión, listo para enfriar.</p>
-            <a class="service-link" href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20la%20instalaci%C3%B3n%20de%20un%20aire%20acondicionado." target="_blank" rel="noopener">
-              Cotizar instalación <svg class="arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <article class="service">
-          <img src="assets/img/servicio-mantenimiento.jpg" width="1200" height="900" loading="lazy"
-               alt="Técnico conectando un manómetro a una unidad exterior de aire acondicionado">
-          <div class="service-body">
-            <h3>Mantenimiento</h3>
-            <p>Limpieza y revisión para que tu aire enfríe como el primer día y no te falle cuando más calor hace.</p>
-            <a class="service-link" href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20el%20mantenimiento%20de%20un%20aire%20acondicionado." target="_blank" rel="noopener">
-              Cotizar mantenimiento <svg class="arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <article class="service">
-          <img src="assets/img/servicio-reparacion.jpg" width="1200" height="900" loading="lazy"
-               alt="Unidad exterior de aire acondicionado iluminada por el sol de la tarde">
-          <div class="service-body">
-            <h3>Reparación</h3>
-            <p>¿No enfría, gotea o hace ruido? Revisamos tu equipo, te decimos qué tiene y lo reparamos.</p>
-            <a class="service-link" href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20la%20reparaci%C3%B3n%20de%20un%20aire%20acondicionado." target="_blank" rel="noopener">
-              Cotizar reparación <svg class="arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </div>
-        </article>
+      <div class="sizer-result" aria-live="polite">
+        <p class="result-big" id="result-big">1.5&nbsp;t</p>
+        <p class="result-line" id="result-line">Minisplit de 1.5 toneladas, 18,000 BTU</p>
+        <p class="result-note">Cálculo orientativo para el calor de La Piedad. En la visita confirmamos la medida.</p>
+        <a class="btn btn--accent" id="sizer-btn" href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20la%20instalaci%C3%B3n%20de%20un%20aire%20acondicionado." target="_blank" rel="noopener">
+          Cotizar por WhatsApp<span class="sr-only"> (se abre en WhatsApp)</span>
+        </a>
       </div>
     </section>
 
-    <!-- ---------- Por qué Polar ---------- -->
-    <section id="porque" class="section why" aria-labelledby="porque-titulo">
-      <figure class="why-media">
-        <img src="assets/img/confort-termostato.jpg" width="1400" height="933" loading="lazy"
-             alt="Mano ajustando un termostato digital en la pared">
-      </figure>
-
-      <div class="why-copy">
-        <h2 id="porque-titulo">Por qué elegir Polar</h2>
-        <ul class="why-list">
-          <li>
-            <h3>Casas y negocios</h3>
-            <p>Atendemos hogares y también locales, oficinas, consultorios y restaurantes.</p>
-          </li>
-          <li>
-            <h3>Precios justos</h3>
-            <p>Sabes cuánto cuesta antes de empezar. Sin cobros sorpresa.</p>
-          </li>
-          <li>
-            <h3>Años de experiencia</h3>
-            <p>Años en el oficio instalando y reparando equipos de todas las marcas.</p>
-          </li>
-          <li>
-            <h3>En La Piedad y alrededores</h3>
-            <p>Vamos a tu domicilio en La Piedad y en los municipios cercanos.</p>
-          </li>
-        </ul>
+    <!-- ---------- Cómo cotizar: acordeón ---------- -->
+    <section class="section steps" id="cotizar" aria-labelledby="cotizar-titulo">
+      <div class="steps-intro">
+        <h2 id="cotizar-titulo" class="head rise">Cómo cotizar</h2>
+        <p class="rise">Todo empieza con un mensaje de WhatsApp. Te damos el precio antes de empezar y tú eliges el día de la visita.</p>
       </div>
-    </section>
 
-    <!-- ---------- Cómo funciona ---------- -->
-    <section id="proceso" class="section steps" aria-labelledby="proceso-titulo">
-      <h2 id="proceso-titulo">Cotizar es así de fácil</h2>
-      <ol class="step-list">
-        <li>
-          <h3>Escríbenos por WhatsApp</h3>
-          <p>Dinos qué necesitas y qué equipo tienes. Si puedes, mándanos una foto.</p>
+      <ol class="accordion rise">
+        <li class="stage is-open">
+          <button type="button" class="stage-tab" aria-expanded="true" aria-controls="stage-1">Escríbenos</button>
+          <div class="stage-body" id="stage-1">
+            <h3>Escríbenos</h3>
+            <p>Dinos qué necesitas: instalación, mantenimiento o reparación, y qué equipo tienes o quieres.</p>
+          </div>
         </li>
-        <li>
-          <h3>Recibe tu cotización</h3>
-          <p>Te decimos el precio y agendamos el día y la hora que te acomoden.</p>
+        <li class="stage">
+          <button type="button" class="stage-tab" aria-expanded="false" aria-controls="stage-2">Manda una foto</button>
+          <div class="stage-body" id="stage-2" hidden>
+            <h3>Manda una foto</h3>
+            <p>Una foto del equipo o del lugar donde lo quieres nos ayuda a cotizar más exacto.</p>
+            <img src="assets/img/confort-termostato.jpg" width="1400" height="933" loading="lazy"
+                 alt="Mano ajustando el control de un equipo en la pared">
+          </div>
         </li>
-        <li>
-          <h3>Vamos a tu casa o negocio</h3>
-          <p>Llegamos, hacemos el trabajo y dejamos tu aire enfriando.</p>
+        <li class="stage">
+          <button type="button" class="stage-tab" aria-expanded="false" aria-controls="stage-3">Recibe tu precio</button>
+          <div class="stage-body" id="stage-3" hidden>
+            <h3>Recibe tu precio</h3>
+            <p>Te decimos cuánto cuesta antes de empezar. Precios justos y sin cobros sorpresa.</p>
+          </div>
+        </li>
+        <li class="stage">
+          <button type="button" class="stage-tab" aria-expanded="false" aria-controls="stage-4">Vamos a tu domicilio</button>
+          <div class="stage-body" id="stage-4" hidden>
+            <h3>Vamos a tu domicilio</h3>
+            <p>Llegamos a tu casa o negocio en La Piedad y alrededores, el día que te acomode.</p>
+            <img src="assets/img/servicio-instalacion.jpg" width="1200" height="900" loading="lazy"
+                 alt="Dos técnicos trabajando junto a unidades de aire acondicionado en una azotea">
+          </div>
         </li>
       </ol>
     </section>
 
-    <!-- ---------- Contacto ---------- -->
-    <section id="contacto" class="section contact" aria-labelledby="contacto-titulo">
-      <div class="contact-info">
-        <h2 id="contacto-titulo">Cotiza tu servicio</h2>
-        <p class="contact-lead">Arma tu mensaje y envíalo por WhatsApp. Te respondemos con tu cotización.</p>
-
-        <ul class="contact-list">
-          <li>
-            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
-            <a href="tel:+523521563476" class="contact-phone" aria-label="Llamar al 352 156 3476">352 156 3476</a>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-            <span>La Piedad, Michoacán y alrededores</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 21V9l8-6 8 6v12"/><path d="M9 21v-6h6v6"/></svg>
-            <!-- Reemplaza el texto por la dirección real -->
-            <span class="placeholder-text">Dirección por confirmar</span>
-          </li>
-        </ul>
-
-        <!-- Mapa: pega aquí el <iframe> de Google Maps cuando tengas la dirección -->
+    <!-- ---------- Por qué Polar ---------- -->
+    <section class="section about" id="porque" aria-labelledby="porque-titulo">
+      <div class="about-row">
+        <div class="facts rise">
+          <h2 id="porque-titulo" class="small-head">Por qué Polar</h2>
+          <dl>
+            <div><dt>Atiende</dt><dd>La Piedad y alrededores</dd></div>
+            <div><dt>Para</dt><dd>Casas y negocios</dd></div>
+            <div><dt>Equipos</dt><dd>Minisplit y de ventana</dd></div>
+          </dl>
+        </div>
+        <p class="about-text rise">
+          Polar es un servicio local de instalación y mantenimiento de aire acondicionado. Llevamos años en el oficio
+          y trabajamos con todas las marcas. Te respondemos rápido, te damos el precio antes de empezar y cada
+          instalación tiene garantía.
+        </p>
       </div>
 
-      <form class="quote" id="quote" aria-labelledby="quote-titulo">
-        <h3 id="quote-titulo">Arma tu mensaje</h3>
-
-        <fieldset class="quote-field">
-          <legend>¿Qué necesitas?</legend>
-          <div class="chips">
-            <label class="chip"><input type="radio" name="servicio" value="la instalación" checked><span>Instalación</span></label>
-            <label class="chip"><input type="radio" name="servicio" value="el mantenimiento"><span>Mantenimiento</span></label>
-            <label class="chip"><input type="radio" name="servicio" value="la reparación"><span>Reparación</span></label>
-          </div>
-        </fieldset>
-
-        <fieldset class="quote-field">
-          <legend>Tipo de equipo</legend>
-          <div class="chips">
-            <label class="chip"><input type="radio" name="equipo" value="un minisplit" checked><span>Minisplit</span></label>
-            <label class="chip"><input type="radio" name="equipo" value="un aire de ventana"><span>De ventana</span></label>
-            <label class="chip"><input type="radio" name="equipo" value="un aire acondicionado (no estoy seguro del tipo)"><span>No sé</span></label>
-          </div>
-        </fieldset>
-
-        <label class="quote-field quote-input">
-          <span class="quote-label">Tu nombre <span class="optional">(opcional)</span></span>
-          <input type="text" name="nombre" autocomplete="name" maxlength="60" placeholder="Ej. Laura">
-        </label>
-
-        <div class="quote-preview" aria-live="polite">
-          <span class="quote-label">Mensaje</span>
-          <p id="quote-text">Hola Polar, me gustaría cotizar la instalación de un minisplit.</p>
+      <div class="about-row about-lists">
+        <div class="list rise">
+          <h3>Siempre</h3>
+          <ul>
+          <li>Garantía en cada instalación</li>
+          <li>Servicio a domicilio</li>
+          <li>Todas las marcas</li>
+          <li>Atención rápida</li>
+          <li>Precios justos</li>
+          </ul>
         </div>
+        <div class="list rise">
+          <h3>Atendemos</h3>
+          <ul>
+          <li>Casas</li>
+          <li>Locales</li>
+          <li>Oficinas</li>
+          <li>Consultorios</li>
+          <li>Restaurantes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-        <a id="quote-btn" class="btn btn--wa btn--lg btn--block"
-           href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20la%20instalaci%C3%B3n%20de%20un%20minisplit."
-           target="_blank" rel="noopener">
-          <svg class="wa-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><use href="#wa"/></svg>
-          Enviar por WhatsApp
-          <span class="sr-only">(se abre en WhatsApp)</span>
+    <!-- ---------- Contacto: filas display ---------- -->
+    <section class="contact" id="contacto" aria-labelledby="contacto-titulo">
+      <h2 class="row" id="contacto-titulo">Contacto</h2>
+      <p class="row row--photo">
+        <span>La Piedad, Michoacán</span>
+        <img src="assets/img/la-piedad-plaza.jpg" width="1920" height="1440" loading="lazy"
+             alt="Plaza principal de La Piedad con el kiosco y el santuario">
+      </p>
+      <!-- Reemplaza por la dirección real (y enlázala a Google Maps) -->
+      <p class="row row--soft">Dirección por confirmar</p>
+      <p class="row"><a href="tel:+523521563476" class="row-link">352 156 3476</a></p>
+      <p class="row row--greet">
+        <span>Escríbenos</span>
+        <a class="btn btn--accent btn--square" href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20un%20servicio%20de%20aire%20acondicionado." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp (se abre en WhatsApp)">
+          <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-      </form>
+      </p>
     </section>
   </main>
 
+  <!-- ---------- Cierre ---------- -->
   <footer class="footer">
-    <div class="footer-brand">
-      <span class="brand-name">Polar</span>
-      <p>Instalación, mantenimiento y reparación de aire acondicionado en La Piedad, Michoacán y alrededores.</p>
+    <div class="footer-top">
+      <div class="invite">
+        <p class="invite-line">¿Hace calor?<br>Escríbenos hoy.</p>
+        <a class="btn btn--paper" href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20un%20servicio%20de%20aire%20acondicionado." target="_blank" rel="noopener">
+          Cotizar por WhatsApp<span class="sr-only"> (se abre en WhatsApp)</span>
+        </a>
+      </div>
+      <ul class="footer-links">
+        <li><a href="tel:+523521563476">352 156 3476</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#inicio">Inicio</a></li>
+      </ul>
     </div>
-    <nav class="footer-links" aria-label="Pie de página">
-      <a href="#servicios">Servicios</a>
-      <a href="#porque">Por qué Polar</a>
-      <a href="#proceso">Cómo funciona</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-    <div class="footer-contact">
-      <a href="tel:+523521563476">352 156 3476</a>
-      <p>© <span id="year">2026</span> Polar · Fotos de apoyo: Unsplash y Pexels</p>
-    </div>
-  </footer>
 
-  <!-- Ícono de WhatsApp reutilizable -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="wa" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/>
-    </symbol>
-  </svg>
+    <div class="legal">
+      <p>© <span id="year">2026</span> Polar · La Piedad, Michoacán</p>
+      <p class="credits">
+        Fotos: <a href="https://commons.wikimedia.org/wiki/File:Se%C3%B1or_de_la_Piedad_(1).JPG">“Señor de la Piedad (1)”</a> y
+        <a href="https://commons.wikimedia.org/wiki/File:Centro_LaPiedad.JPG">“Centro LaPiedad”</a> de AntonioRz,
+        <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, vía Wikimedia Commons.
+        Fotos de apoyo de Unsplash y Pexels.
+      </p>
+    </div>
+
+    <p class="footer-name" aria-hidden="true">Polar</p>
+  </footer>
 
   <script src="script.js" defer></script>
 </body>

@@ -35,7 +35,7 @@ A local technician in La Piedad, Michoacán and nearby towns who answers fast, q
 
 - Name: Polar.
 - Confirmed claims: "Garantía en cada instalación", "Servicio a domicilio", "Todas las marcas", fast response, fair prices, years of experience.
-- Standing preference (chosen 2026-10-31): the category standard, played straight. The craft bar is the air-conditioning brand sites (Mirage, Carrier, Daikin): clean, trustworthy, large product photography.
+- Visual identity (2026-10-31): the owner asked for a site with its own identity. The earlier "category standard" preference is replaced by the Taste Skill direction "The name as a monument": POLAR set across the bottom of a sunlit La Piedad photo, black and white with one blue for the action (see `.taste-skill/notes.md`).
 
 ## Evidence on Hand
 

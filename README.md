@@ -19,10 +19,11 @@ Abre http://localhost:5173
 
 ## Pendientes del dueño
 
-- **Logo:** reemplazar el `<span class="logo-slot">` de la barra de navegación en `index.html` (está marcado con un comentario).
-- **Dirección y mapa:** reemplazar "Dirección por confirmar" y pegar el `<iframe>` de Google Maps donde indica el comentario en la sección de contacto.
+- **Logo:** reemplazar el `<svg>` del emblema en la barra de `index.html` (está marcado con un comentario).
+- **Dirección y mapa:** reemplazar "Dirección por confirmar" en la sección de contacto (está marcado con un comentario).
 - **Fotos:** las de `assets/img/` son de apoyo; cambiarlas por fotos reales de los trabajos.
 
 ## Créditos
 
-Fotos de apoyo de Unsplash y Pexels (licencias Unsplash y Pexels). El origen de cada foto está guardado dentro del archivo.
+- "Señor de la Piedad (1)" y "Centro LaPiedad" de AntonioRz, CC BY-SA 4.0, vía Wikimedia Commons (`assets/credits.json`).
+- Fotos de apoyo de Unsplash y Pexels (licencias Unsplash y Pexels). El origen de cada una está guardado dentro del archivo.
