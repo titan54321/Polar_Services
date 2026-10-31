@@ -1,0 +1,47 @@
+# Publica la landing de Polar en GitHub Pages cada vez que hay cambios en main.
+name: Publicar en GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Un solo despliegue a la vez; si llega otro, el anterior se termina primero
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Solo se publican los archivos del sitio, no las carpetas internas (.claude, .impeccable)
+      - name: Preparar el sitio
+        run: |
+          mkdir _site
+          cp index.html styles.css script.js _site/
+          cp -r assets _site/
+          touch _site/.nojekyll
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

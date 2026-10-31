@@ -2,6 +2,13 @@
 
 Landing page para Polar, técnico instalador de aires acondicionados.
 
+## Publicación
+
+Cada `push` a `main` publica el sitio en GitHub Pages con el workflow `.github/workflows/pages.yml`.
+Solo se publican `index.html`, `styles.css`, `script.js` y `assets/`.
+
+Sitio: https://titan54321.github.io/Polar_Services/
+
 ## Ver en local
 
 ```bash
