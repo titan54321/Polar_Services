@@ -1,0 +1,372 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-31T22:52:16+00:00",
+  "title": "Design System: Polar",
+  "extensions": {
+    "colorMeta": {
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "oklch(100% 0 0)",
+        "tonalRamp": [
+          "oklch(15% 0.000 0)",
+          "oklch(25% 0.000 0)",
+          "oklch(35% 0.000 0)",
+          "oklch(48% 0.000 0)",
+          "oklch(60% 0.000 0)",
+          "oklch(72% 0.000 0)",
+          "oklch(84% 0.000 0)",
+          "oklch(95% 0.000 0)"
+        ]
+      },
+      "ice": {
+        "role": "neutral",
+        "displayName": "Ice",
+        "canonical": "oklch(96.8% 0.015 257.2)",
+        "tonalRamp": [
+          "oklch(15% 0.014 257)",
+          "oklch(25% 0.018 257)",
+          "oklch(35% 0.022 257)",
+          "oklch(48% 0.027 257)",
+          "oklch(60% 0.028 257)",
+          "oklch(72% 0.023 257)",
+          "oklch(84% 0.018 257)",
+          "oklch(95% 0.014 257)"
+        ]
+      },
+      "ice-deep": {
+        "role": "neutral",
+        "displayName": "Deep Ice",
+        "canonical": "oklch(93% 0.029 257.8)",
+        "tonalRamp": [
+          "oklch(15% 0.023 258)",
+          "oklch(25% 0.030 258)",
+          "oklch(35% 0.036 258)",
+          "oklch(48% 0.045 258)",
+          "oklch(60% 0.047 258)",
+          "oklch(72% 0.038 258)",
+          "oklch(84% 0.030 258)",
+          "oklch(95% 0.023 258)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Navy Ink",
+        "canonical": "oklch(23.4% 0.047 250.5)",
+        "tonalRamp": [
+          "oklch(15% 0.027 250)",
+          "oklch(25% 0.035 250)",
+          "oklch(35% 0.044 250)",
+          "oklch(48% 0.054 250)",
+          "oklch(60% 0.056 250)",
+          "oklch(72% 0.046 250)",
+          "oklch(84% 0.036 250)",
+          "oklch(95% 0.027 250)"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Slate Ink",
+        "canonical": "oklch(43.8% 0.045 250)",
+        "tonalRamp": [
+          "oklch(15% 0.023 250)",
+          "oklch(25% 0.030 250)",
+          "oklch(35% 0.036 250)",
+          "oklch(48% 0.045 250)",
+          "oklch(60% 0.047 250)",
+          "oklch(72% 0.038 250)",
+          "oklch(84% 0.030 250)",
+          "oklch(95% 0.023 250)"
+        ]
+      },
+      "polar-blue": {
+        "role": "primary",
+        "displayName": "Polar Blue",
+        "canonical": "oklch(51% 0.205 260.4)",
+        "tonalRamp": [
+          "oklch(15% 0.091 260)",
+          "oklch(25% 0.118 260)",
+          "oklch(35% 0.145 260)",
+          "oklch(48% 0.181 260)",
+          "oklch(60% 0.186 260)",
+          "oklch(72% 0.154 260)",
+          "oklch(84% 0.121 260)",
+          "oklch(95% 0.091 260)"
+        ]
+      },
+      "polar-blue-deep": {
+        "role": "primary",
+        "displayName": "Deep Polar Blue",
+        "canonical": "oklch(39% 0.142 259)",
+        "tonalRamp": [
+          "oklch(15% 0.073 259)",
+          "oklch(25% 0.095 259)",
+          "oklch(35% 0.116 259)",
+          "oklch(48% 0.145 259)",
+          "oklch(60% 0.149 259)",
+          "oklch(72% 0.123 259)",
+          "oklch(84% 0.097 259)",
+          "oklch(95% 0.073 259)"
+        ]
+      },
+      "whatsapp-green": {
+        "role": "secondary",
+        "displayName": "WhatsApp Green",
+        "canonical": "oklch(76.1% 0.201 149.7)",
+        "tonalRamp": [
+          "oklch(15% 0.091 150)",
+          "oklch(25% 0.118 150)",
+          "oklch(35% 0.145 150)",
+          "oklch(48% 0.181 150)",
+          "oklch(60% 0.186 150)",
+          "oklch(72% 0.154 150)",
+          "oklch(84% 0.121 150)",
+          "oklch(95% 0.091 150)"
+        ]
+      },
+      "whatsapp-green-hover": {
+        "role": "secondary",
+        "displayName": "WhatsApp Green Pressed",
+        "canonical": "oklch(70.6% 0.188 149.7)",
+        "tonalRamp": [
+          "oklch(15% 0.086 150)",
+          "oklch(25% 0.112 150)",
+          "oklch(35% 0.138 150)",
+          "oklch(48% 0.172 150)",
+          "oklch(60% 0.177 150)",
+          "oklch(72% 0.146 150)",
+          "oklch(84% 0.115 150)",
+          "oklch(95% 0.086 150)"
+        ]
+      },
+      "whatsapp-ink": {
+        "role": "secondary",
+        "displayName": "Forest Ink",
+        "canonical": "oklch(27.4% 0.061 155.8)",
+        "tonalRamp": [
+          "oklch(15% 0.032 156)",
+          "oklch(25% 0.041 156)",
+          "oklch(35% 0.051 156)",
+          "oklch(48% 0.063 156)",
+          "oklch(60% 0.065 156)",
+          "oklch(72% 0.054 156)",
+          "oklch(84% 0.042 156)",
+          "oklch(95% 0.032 156)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero h1 only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section h2s."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card, step and list item h3s; quote card title at 1.5rem."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Supporting sentence under the h1 and section heads, Slate Ink, 34-44ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Nav links, chips, legends and form labels, trust strip, footer text (600-700)."
+      },
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "The 'Polar' name in Polar Blue, nav and footer."
+      }
+    },
+    "shadows": [
+      {
+        "name": "nav-lift",
+        "value": "0 1px 0 rgb(11 31 51 / 0.06), 0 8px 24px -12px rgb(11 31 51 / 0.18)",
+        "purpose": "Sticky nav, only after scrolling past 8px."
+      },
+      {
+        "name": "quote-float",
+        "value": "0 2px 4px rgb(11 31 51 / 0.04), 0 24px 48px -20px rgb(11 31 51 / 0.22)",
+        "purpose": "The quote card, the only surface lifted at rest."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "All transforms: press, arrow nudge, hero entrance."
+      },
+      {
+        "name": "press",
+        "value": "transform: scale(0.97) over 160ms ease-out",
+        "purpose": "Active state of buttons and chips."
+      },
+      {
+        "name": "state-fade",
+        "value": "150ms ease (color, background-color); 200ms ease (nav shadow)",
+        "purpose": "Hover and selection color changes."
+      },
+      {
+        "name": "arrow-nudge",
+        "value": "translateX(4px) over 200ms ease-out",
+        "purpose": "Service link arrow on hover."
+      },
+      {
+        "name": "hero-entrance",
+        "value": "opacity 0 to 1 and translateY(18px) to 0 over 700ms ease-out, 80ms stagger",
+        "purpose": "Hero copy and photo on load only; removed under reduced motion."
+      },
+      {
+        "name": "hero-photo-settle",
+        "value": "scale(1.06) to 1 over 1600ms ease-out, 150ms delay",
+        "purpose": "Hero photograph on load only."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "tablet-wide",
+        "value": "max-width: 1099px"
+      },
+      {
+        "name": "tablet",
+        "value": "max-width: 899px"
+      },
+      {
+        "name": "phone",
+        "value": "max-width: 599px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "WhatsApp Button",
+      "kind": "button",
+      "refersTo": "button-whatsapp",
+      "description": "The one primary action: a green pill that opens a WhatsApp quote. Sizes 42 / 52 / 60px.",
+      "html": "<a class=\"ds-btn-wa\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z\"/></svg>Cotizar instalación</a>",
+      "css": ".ds-btn-wa { display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: 60px; padding: 0 30px; border-radius: 999px; background: var(--wa, #25d366); color: var(--wa-ink, #05301a); font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif; font-weight: 700; font-size: 1.125rem; text-decoration: none; white-space: nowrap; transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1), background-color 150ms ease; } .ds-btn-wa:hover { background: var(--wa-hover, #1fbf5b); } .ds-btn-wa:active { transform: scale(0.97); } .ds-btn-wa:focus-visible { outline: 3px solid var(--blue, #0a5bd8); outline-offset: 3px; }"
+    },
+    {
+      "name": "Service Chips",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Radio choices as pills; selected turns Polar Blue.",
+      "html": "<div class=\"ds-chips\"><label class=\"ds-chip\"><input type=\"radio\" name=\"ds-s\" checked><span>Instalación</span></label><label class=\"ds-chip\"><input type=\"radio\" name=\"ds-s\"><span>Mantenimiento</span></label><label class=\"ds-chip\"><input type=\"radio\" name=\"ds-s\"><span>Reparación</span></label></div>",
+      "css": ".ds-chips { display: flex; flex-wrap: wrap; gap: 8px; } .ds-chip { position: relative; } .ds-chip input { position: absolute; inset: 0; margin: 0; opacity: 0; cursor: pointer; } .ds-chip span { display: inline-flex; align-items: center; height: 46px; padding: 0 20px; border-radius: 999px; background: var(--ice, #eef5ff); color: var(--ink, #0b1f33); font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif; font-weight: 600; font-size: 0.9375rem; transition: background-color 150ms ease, color 150ms ease, transform 160ms cubic-bezier(0.23, 1, 0.32, 1); user-select: none; } .ds-chip input:not(:checked):hover + span { background: var(--ice-2, #dce9fc); } .ds-chip input:checked + span { background: var(--blue, #0a5bd8); color: #fff; } .ds-chip input:active + span { transform: scale(0.97); } .ds-chip input:focus-visible + span { outline: 3px solid var(--blue, #0a5bd8); outline-offset: 3px; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "Borderless ice field with label above.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">Tu nombre <span class=\"ds-optional\">(opcional)</span></span><input class=\"ds-input\" type=\"text\" placeholder=\"Ej. Laura\"></label>",
+      "css": ".ds-field { display: block; font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif; } .ds-field-label { display: block; margin-bottom: 12px; font-size: 0.9375rem; font-weight: 700; color: var(--ink, #0b1f33); } .ds-optional { color: var(--ink-soft, #3f546a); font-weight: 500; } .ds-input { width: 100%; height: 52px; padding: 0 16px; border: 0; border-radius: 12px; background: var(--ice, #eef5ff); color: var(--ink, #0b1f33); font: inherit; font-size: 1.0625rem; caret-color: var(--blue, #0a5bd8); } .ds-input::placeholder { color: #566c84; } .ds-input:focus-visible { outline: 3px solid var(--blue, #0a5bd8); outline-offset: 2px; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Sticky white bar: logo slot and wordmark, slate links, phone, small WhatsApp button.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-brand\" href=\"#\"><span class=\"ds-logo\"><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"><path d=\"M12 2v20M4.9 6.5l14.2 11M19.1 6.5 4.9 17.5\"/></svg></span><span class=\"ds-wordmark\">Polar</span></a><nav class=\"ds-nav-links\"><a href=\"#\">Servicios</a><a href=\"#\">Por qué Polar</a><a href=\"#\">Contacto</a></nav><a class=\"ds-nav-phone\" href=\"#\">352 156 3476</a><a class=\"ds-nav-cta\" href=\"#\">Cotizar</a></header>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 28px; padding: 14px 24px; background: #fff; box-shadow: 0 1px 0 rgb(11 31 51 / 0.06), 0 8px 24px -12px rgb(11 31 51 / 0.18); font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif; } .ds-nav a { text-decoration: none; color: inherit; } .ds-brand { display: flex; align-items: center; gap: 10px; margin-right: auto; } .ds-logo { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; background: var(--ice, #eef5ff); color: var(--blue, #0a5bd8); } .ds-wordmark { font-weight: 800; font-size: 1.5rem; letter-spacing: -0.03em; color: var(--blue, #0a5bd8); } .ds-nav-links { display: flex; gap: 28px; font-size: 0.9375rem; font-weight: 600; color: var(--ink-soft, #3f546a); } .ds-nav-links a { transition: color 150ms ease; } .ds-nav-links a:hover, .ds-nav-phone:hover { color: var(--blue, #0a5bd8); } .ds-nav-phone { font-weight: 700; font-size: 0.9375rem; font-variant-numeric: tabular-nums; color: var(--ink, #0b1f33); } .ds-nav-cta { display: inline-flex; align-items: center; height: 42px; padding: 0 18px; border-radius: 999px; background: var(--wa, #25d366); color: var(--wa-ink, #05301a) !important; font-weight: 700; font-size: 0.9375rem; } .ds-nav-cta:hover { background: var(--wa-hover, #1fbf5b); } .ds-nav a:focus-visible { outline: 3px solid var(--blue, #0a5bd8); outline-offset: 3px; border-radius: 6px; }"
+    },
+    {
+      "name": "Promise Tile",
+      "kind": "card",
+      "refersTo": "promise-tile",
+      "description": "Trust strip item: blue line icon and a two-weight confirmed claim on ice.",
+      "html": "<div class=\"ds-promise\"><svg viewBox=\"0 0 24 24\" width=\"28\" height=\"28\" aria-hidden=\"true\"><path d=\"M12 3 4 6v6c0 4.4 3.4 8.3 8 9 4.6-.7 8-4.6 8-9V6l-8-3Z\"/><path d=\"m8.5 12 2.5 2.5 4.5-5\"/></svg><span><strong>Garantía</strong> en cada instalación</span></div>",
+      "css": ".ds-promise { display: flex; align-items: center; gap: 14px; max-width: 300px; padding: 20px 22px; border-radius: 18px; background: var(--ice, #eef5ff); color: var(--ink-soft, #3f546a); font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 0.9375rem; line-height: 1.35; } .ds-promise svg { flex: none; fill: none; stroke: var(--blue, #0a5bd8); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; } .ds-promise strong { display: block; color: var(--ink, #0b1f33); font-size: 1.0625rem; }"
+    },
+    {
+      "name": "Service Card",
+      "kind": "card",
+      "refersTo": "service-card",
+      "description": "Ice card, 28px radius: photo on top, title, slate copy, blue quote link with sliding arrow.",
+      "html": "<article class=\"ds-service\"><div class=\"ds-service-img\"></div><div class=\"ds-service-body\"><h3>Mantenimiento</h3><p>Limpieza y revisión para que tu aire enfríe como el primer día.</p><a class=\"ds-service-link\" href=\"#\">Cotizar mantenimiento <svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a></div></article>",
+      "css": ".ds-service { display: flex; flex-direction: column; max-width: 380px; border-radius: 28px; overflow: hidden; background: var(--ice, #eef5ff); color: var(--ink, #0b1f33); font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif; } .ds-service-img { aspect-ratio: 4 / 3; background: linear-gradient(160deg, #dce9fc, #b9cff0); } .ds-service-body { display: flex; flex-direction: column; gap: 10px; padding: 26px 28px 30px; } .ds-service-body h3 { margin: 0; font-size: 1.375rem; line-height: 1.2; font-weight: 700; letter-spacing: -0.02em; } .ds-service-body p { margin: 0; color: var(--ink-soft, #3f546a); line-height: 1.6; } .ds-service-link { display: inline-flex; align-items: center; gap: 6px; padding-top: 10px; font-weight: 700; color: var(--blue, #0a5bd8); text-decoration: none; } .ds-service-link svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-service-link:hover { color: var(--blue-deep, #08408f); } .ds-service-link:hover svg { transform: translateX(4px); } .ds-service-link:focus-visible { outline: 3px solid var(--blue, #0a5bd8); outline-offset: 3px; border-radius: 6px; }"
+    },
+    {
+      "name": "Why List Item",
+      "kind": "custom",
+      "description": "Reason with a white check on a Polar Blue disc.",
+      "html": "<ul class=\"ds-why\"><li><h3>Precios justos</h3><p>Sabes cuánto cuesta antes de empezar. Sin cobros sorpresa.</p></li></ul>",
+      "css": ".ds-why { list-style: none; margin: 0; padding: 0; font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif; color: var(--ink, #0b1f33); } .ds-why li { position: relative; padding-left: 48px; } .ds-why li::before { content: \"\"; position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 999px; background: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12.5 4 4 8-9'/%3E%3C/svg%3E\") center / 18px no-repeat, var(--blue, #0a5bd8); } .ds-why h3 { margin: 0; font-size: 1.375rem; line-height: 1.2; font-weight: 700; letter-spacing: -0.02em; } .ds-why p { margin: 6px 0 0; color: var(--ink-soft, #3f546a); line-height: 1.6; }"
+    },
+    {
+      "name": "Step Card",
+      "kind": "card",
+      "refersTo": "step-card",
+      "description": "Deep blue card on the Polar Blue band, opening with a white numeral disc.",
+      "html": "<div class=\"ds-steps\"><div class=\"ds-step\"><span class=\"ds-step-n\">1</span><h3>Escríbenos por WhatsApp</h3><p>Dinos qué necesitas y qué equipo tienes.</p></div></div>",
+      "css": ".ds-steps { padding: 32px; background: var(--blue, #0a5bd8); font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif; } .ds-step { max-width: 340px; padding: 28px; border-radius: 28px; background: var(--blue-deep, #08408f); color: #fff; } .ds-step-n { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 20px; border-radius: 999px; background: #fff; color: var(--blue, #0a5bd8); font-weight: 800; font-size: 1.25rem; } .ds-step h3 { margin: 0; font-size: 1.375rem; line-height: 1.2; font-weight: 700; letter-spacing: -0.02em; } .ds-step p { margin: 8px 0 0; color: rgb(255 255 255 / 0.85); line-height: 1.6; }"
+    },
+    {
+      "name": "Quote Card",
+      "kind": "card",
+      "refersTo": "quote-card",
+      "description": "The lifted white destination card: chips, optional name, live message preview, full-width WhatsApp button.",
+      "html": "<form class=\"ds-quote\"><h3>Arma tu mensaje</h3><div class=\"ds-quote-preview\"><span>Mensaje</span><p>Hola Polar, me gustaría cotizar la instalación de un minisplit.</p></div><a class=\"ds-quote-btn\" href=\"#\">Enviar por WhatsApp</a></form>",
+      "css": ".ds-quote { display: grid; gap: 26px; max-width: 460px; padding: 40px; border-radius: 28px; background: #fff; box-shadow: 0 2px 4px rgb(11 31 51 / 0.04), 0 24px 48px -20px rgb(11 31 51 / 0.22); color: var(--ink, #0b1f33); font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif; } .ds-quote h3 { margin: 0; font-size: 1.5rem; line-height: 1.2; font-weight: 700; letter-spacing: -0.02em; } .ds-quote-preview { padding: 18px 20px; border-radius: 12px; background: var(--ice, #eef5ff); } .ds-quote-preview span { display: block; margin-bottom: 12px; font-size: 0.9375rem; font-weight: 700; } .ds-quote-preview p { margin: 0; line-height: 1.6; } .ds-quote-btn { display: flex; align-items: center; justify-content: center; height: 60px; border-radius: 999px; background: var(--wa, #25d366); color: var(--wa-ink, #05301a); font-weight: 700; font-size: 1.125rem; text-decoration: none; transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1), background-color 150ms ease; } .ds-quote-btn:hover { background: var(--wa-hover, #1fbf5b); } .ds-quote-btn:active { transform: scale(0.97); } .ds-quote-btn:focus-visible { outline: 3px solid var(--blue, #0a5bd8); outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Clear Afternoon Showroom",
+    "overview": "Polar is the air-conditioning category standard played straight, held to the craft bar of the big AC brand sites: daylight grounds, large rounded product photography, one confident blue, and a quote that is always one tap away. The page reads cool and clean the way a freshly installed unit does: white and pale ice-blue surfaces, deep navy ink, and no ornament that does not help a hot visitor on a phone decide to write on WhatsApp.\n\nDensity is generous and calm. Sections breathe on a fluid vertical rhythm, photographs sit in big soft-cornered frames, and structure comes from filled tonal surfaces (ice panels on white, deep-blue cards on a blue band) rather than from lines or borders. Type is a single family, Manrope, used at heavy weights with tight tracking for headings and plain open settings for reading.\n\nColor carries meaning, not decoration. Polar blue is structure, selection and links; WhatsApp green belongs to the quote action and nothing else. The system replaced an earlier dark neon tech look and rejects it: Polar lives in daylight.",
+    "keyCharacteristics": [
+      "Light only: white and ice-blue grounds, navy ink, no dark theme.",
+      "One family (Manrope), heavy weights (700–800) and negative tracking for headings.",
+      "Filled surfaces instead of hairlines; borders are effectively absent.",
+      "Large radii (28px) on photographs and cards; pills for every control.",
+      "Green is reserved for the WhatsApp quote action.",
+      "Motion is a single load-time entrance on the hero; the rest of the page is still."
+    ],
+    "rules": [
+      {
+        "name": "The Green Means WhatsApp Rule",
+        "body": "WhatsApp Green appears only on the control that sends a quote request. Never use it for decoration, badges, success states or secondary links.",
+        "section": "colors"
+      },
+      {
+        "name": "The Blue Is Structure Rule",
+        "body": "Polar Blue marks what is interactive or structural (links, selection, focus, icons, the steps band). Body copy is never blue.",
+        "section": "colors"
+      },
+      {
+        "name": "The Heavy Headings Rule",
+        "body": "Headings are 700 or 800 with negative tracking; nothing between 400 body and 700 title is used for a heading. No uppercase, no letterspaced labels above headings.",
+        "section": "typography"
+      },
+      {
+        "name": "The Filled Not Lined Rule",
+        "body": "Separate things with tonal fills and space, not borders or dividers. The build has no visible borders.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep every ground light: White and Ice, with Navy Ink text.",
+      "**Do** reserve WhatsApp Green for the quote action, with Forest Ink (not white) on it.",
+      "**Do** use Polar Blue for links, selection, focus, icons and the single steps band.",
+      "**Do** separate content with tonal fills (Ice on White, Deep Polar Blue on Polar Blue) and space.",
+      "**Do** frame photographs large, with the 28px radius.",
+      "**Do** make every control a pill and keep tap targets at 42px or taller (46px chips, 52–60px buttons).",
+      "**Do** set phone numbers in tabular figures and let the contact phone be big and blue.",
+      "**Do** gate hover styling to fine pointers and honor reduced motion."
+    ],
+    "donts": [
+      "**Don't** bring back the dark neon tech look this system replaced.",
+      "**Don't** use green for anything but sending a quote.",
+      "**Don't** add borders, hairline dividers or outlined cards; use fills.",
+      "**Don't** add shadows beyond the two in the vocabulary, or lift any surface other than the quote card at rest.",
+      "**Don't** introduce a second typeface, or set headings below 700.",
+      "**Don't** add scroll-triggered animation; the hero entrance is the only choreographed motion."
+    ]
+  }
+}

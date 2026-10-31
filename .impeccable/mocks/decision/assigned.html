@@ -1,0 +1,28 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Azulejo</title>
+<style>
+*{box-sizing:border-box}body{margin:0;width:1440px;height:900px;overflow:hidden;font-family:"Arial Black",Arial,sans-serif;background:#16359b}
+.wall{position:absolute;inset:0;background-color:#f2f6fb;
+background-image:
+radial-gradient(circle at 50% 50%,#16359b 0 18px,transparent 19px),
+radial-gradient(circle at 0 0,#16359b 0 34px,transparent 35px),radial-gradient(circle at 100% 0,#16359b 0 34px,transparent 35px),
+radial-gradient(circle at 0 100%,#16359b 0 34px,transparent 35px),radial-gradient(circle at 100% 100%,#16359b 0 34px,transparent 35px),
+linear-gradient(#cfd8e6 0 0);background-size:120px 120px;background-blend-mode:normal}
+.wall::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 118px,#c3ccd9 118px 120px),repeating-linear-gradient(0deg,transparent 0 118px,#c3ccd9 118px 120px)}
+nav{position:absolute;top:0;left:0;right:0;height:96px;display:flex;align-items:center;justify-content:space-between;padding:0 120px;z-index:2}
+nav b{background:#f2f6fb;color:#0d1f5c;padding:14px 22px;font-size:26px;border:4px solid #0d1f5c}
+nav span{background:#0d1f5c;color:#fff;padding:14px 22px;font-size:20px}
+.panel{position:absolute;left:120px;top:120px;width:840px;height:660px;background:#f2f6fb;border:10px solid #0d1f5c;padding:48px 56px;z-index:2}
+h1{margin:0;font-size:168px;line-height:.9;color:#16359b;letter-spacing:-4px}
+p{margin:18px 0 0;font:700 30px/1.25 Arial;color:#0d1f5c}
+.chips{display:flex;gap:12px;margin-top:34px}.chips i{font:700 24px Arial;font-style:normal;padding:14px 24px;background:#dfe7f3;color:#0d1f5c}.chips i:first-child{background:#16359b;color:#fff}
+.cta{margin-top:28px;display:inline-block;background:#ffd23f;color:#0d1f5c;padding:24px 40px;font-size:30px}
+.num{position:absolute;right:120px;top:240px;display:grid;grid-template-columns:repeat(4,120px);gap:0;z-index:2}
+.num div{width:120px;height:120px;background:#f2f6fb;border:4px solid #16359b;display:grid;place-items:center;font-size:76px;color:#16359b}
+.photo{position:absolute;right:120px;top:600px;width:480px;height:180px;background:#9aa7b8;border:10px solid #0d1f5c;z-index:2}
+</style></head><body><div class="wall"></div>
+<nav><b>POLAR</b><span>352 156 3476</span></nav>
+<div class="panel"><h1>Polar</h1><p>Instalación, mantenimiento y reparación de aires acondicionados en La Piedad y alrededores.</p>
+<div class="chips"><i>Instalación</i><i>Mantenimiento</i><i>Reparación</i></div><div class="cta">Cotizar por WhatsApp →</div></div>
+<div class="num"><div>3</div><div>5</div><div>2</div><div></div><div>1</div><div>5</div><div>6</div><div></div><div>3</div><div>4</div><div>7</div><div>6</div></div>
+<div class="photo"></div>
+</body></html>
