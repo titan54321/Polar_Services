@@ -128,25 +128,44 @@ stages.forEach((stage) => {
 
 // ---------- Entradas al hacer scroll ----------
 
+const risers = [...document.querySelectorAll(".rise")];
+const reveal = (el) => el.classList.add("is-in");
+
+// Muestra todo lo que ya está en pantalla o arriba de ella. Es el respaldo por si el
+// observador no avisa (pestaña en segundo plano, salto con un enlace, navegador viejo).
+function revealPassed() {
+  const limit = window.innerHeight * 0.95;
+  for (const el of risers) {
+    if (!el.classList.contains("is-in") && el.getBoundingClientRect().top < limit) reveal(el);
+  }
+}
+
+// El escalonado empieza de nuevo en cada sección
+document.querySelectorAll("section").forEach((section) => {
+  section.querySelectorAll(".rise").forEach((el, i) => el.style.setProperty("--i", Math.min(i, 6)));
+});
+
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
-      entry.target.classList.add("is-in");
+      reveal(entry.target);
       observer.unobserve(entry.target);
     }
   }, { rootMargin: "0px 0px -10% 0px" });
 
-  // El escalonado empieza de nuevo en cada sección
-  document.querySelectorAll("section").forEach((section) => {
-    section.querySelectorAll(".rise").forEach((el, i) => {
-      el.style.setProperty("--i", Math.min(i, 6));
-      observer.observe(el);
-    });
-  });
-} else {
-  document.querySelectorAll(".rise").forEach((el) => el.classList.add("is-in"));
+  risers.forEach((el) => observer.observe(el));
 }
+
+let ticking = false;
+window.addEventListener("scroll", () => {
+  if (ticking) return;
+  ticking = true;
+  requestAnimationFrame(() => { revealPassed(); ticking = false; });
+}, { passive: true });
+window.addEventListener("hashchange", revealPassed);
+window.addEventListener("load", revealPassed);
+revealPassed();
 
 // ---------- Año del pie de página ----------
 

@@ -29,6 +29,10 @@ jobs:
           cp index.html styles.css script.js _site/
           cp -r assets _site/
           touch _site/.nojekyll
+          # Versión en los archivos para que el navegador no mezcle CSS/JS viejos con el HTML nuevo
+          V="${GITHUB_SHA::7}"
+          sed -i "s#href=\"styles.css\"#href=\"styles.css?v=$V\"#; s#src=\"script.js\"#src=\"script.js?v=$V\"#" _site/index.html
+          grep -q "styles.css?v=$V" _site/index.html && grep -q "script.js?v=$V" _site/index.html
 
       - uses: actions/configure-pages@v5
 
