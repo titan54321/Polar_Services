@@ -1,0 +1,334 @@
+:root {
+  --bg: #06121f;
+  --ink: #f2f7fc;
+  --ink-soft: rgb(220 233 245 / 0.78);
+  --ink-mute: rgb(220 233 245 / 0.56);
+  --ice: #7fd3ff;
+  --ice-strong: #3db8f5;
+  --line: rgb(255 255 255 / 0.16);
+  --glass: rgb(255 255 255 / 0.06);
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --radius: 14px;
+  --gutter: clamp(16px, 5vw, 64px);
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ---------- Navegación ---------- */
+
+.nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 18px var(--gutter);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: auto;
+}
+
+.brand-name {
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.nav-links a { transition: color 150ms ease; }
+.nav-links a:hover { color: var(--ink); }
+
+/* ---------- Espacio para el logo ---------- */
+
+.logo-slot {
+  display: grid;
+  place-items: center;
+  border: 1.5px dashed rgb(127 211 255 / 0.55);
+  background: rgb(127 211 255 / 0.06);
+  color: var(--ice);
+  font-weight: 600;
+  text-align: center;
+}
+
+.logo-slot--sm {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 0.6rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.logo-slot--lg {
+  width: 112px;
+  height: 112px;
+  border-radius: 24px;
+  gap: 6px;
+  align-content: center;
+  margin-bottom: 32px;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+}
+
+/* Para cuando el logo real esté listo */
+.hero-logo {
+  display: block;
+  height: 112px;
+  width: auto;
+  margin-bottom: 32px;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: 120px var(--gutter) 96px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(100deg, rgb(4 14 26 / 0.94) 0%, rgb(5 20 38 / 0.82) 42%, rgb(8 32 58 / 0.45) 100%),
+    linear-gradient(to top, rgb(6 18 31 / 0.9) 0%, transparent 35%),
+    url("assets/img/hero-ac.jpg");
+  background-size: cover;
+  background-position: center 30%;
+  transform: scale(1.06);
+  animation: bg-settle 1600ms var(--ease-out) forwards;
+}
+
+/* Brillo frío sutil detrás del texto */
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(60% 70% at 15% 55%, rgb(61 184 245 / 0.16), transparent 70%);
+}
+
+.hero-content {
+  max-width: 640px;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ice);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.6rem, 7vw, 5rem);
+  line-height: 1.02;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.accent {
+  background: linear-gradient(120deg, #ffffff 0%, var(--ice) 55%, var(--ice-strong) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.lead {
+  margin: 24px 0 0;
+  max-width: 52ch;
+  font-size: clamp(1.02rem, 1.6vw, 1.15rem);
+  line-height: 1.65;
+  color: var(--ink-soft);
+  text-wrap: pretty;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+.trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  margin: 48px 0 0;
+  padding: 24px 0 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+  color: var(--ink-mute);
+}
+
+.trust strong { color: var(--ink); font-weight: 600; }
+
+/* ---------- Botones ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 0 26px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.98rem;
+  transition:
+    transform 160ms var(--ease-out),
+    background-color 150ms ease,
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:active { transform: scale(0.97); }
+
+.btn:focus-visible,
+.nav-links a:focus-visible,
+.brand:focus-visible {
+  outline: 2px solid var(--ice);
+  outline-offset: 3px;
+}
+
+.btn--primary {
+  background: var(--ice);
+  color: #04203a;
+  box-shadow: 0 8px 30px -8px rgb(127 211 255 / 0.6);
+}
+
+.btn--ghost {
+  border: 1px solid var(--line);
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.btn--sm { height: 40px; padding: 0 18px; font-size: 0.9rem; }
+
+@media (hover: hover) and (pointer: fine) {
+  .btn--primary:hover { background: #a3e0ff; }
+  .btn--ghost:hover { background: rgb(255 255 255 / 0.12); border-color: rgb(255 255 255 / 0.28); }
+}
+
+/* ---------- Indicador de scroll ---------- */
+
+.scroll-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  width: 26px;
+  height: 42px;
+  margin-left: -13px;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+}
+
+.scroll-hint span {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 4px;
+  height: 8px;
+  margin-left: -2px;
+  border-radius: 2px;
+  background: var(--ice);
+  animation: scroll-dot 2s var(--ease-out) infinite;
+}
+
+/* ---------- Animaciones de entrada ---------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  filter: blur(4px);
+  animation: reveal 800ms var(--ease-out) forwards;
+  animation-delay: calc(120ms + var(--i, 0) * 80ms);
+}
+
+@keyframes reveal {
+  to { opacity: 1; transform: none; filter: none; }
+}
+
+@keyframes bg-settle {
+  to { transform: scale(1); }
+}
+
+@keyframes scroll-dot {
+  0%   { opacity: 0; transform: translateY(0); }
+  30%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(14px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .hero-bg,
+  .scroll-hint span {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 767px) {
+  .nav-links { display: none; }
+
+  .hero {
+    align-items: flex-end;
+    padding-bottom: 48px;
+  }
+
+  .hero-bg {
+    background-image:
+      linear-gradient(to top, rgb(4 14 26 / 0.97) 0%, rgb(5 20 38 / 0.88) 45%, rgb(8 32 58 / 0.62) 75%, rgb(8 32 58 / 0.4) 100%),
+      url("assets/img/hero-ac-mobile.jpg");
+    background-position: 40% top;
+  }
+
+  .scroll-hint { display: none; }
+
+  .logo-slot--lg { width: 88px; height: 88px; border-radius: 20px; margin-bottom: 24px; }
+  .hero-logo { height: 88px; margin-bottom: 24px; }
+
+  .actions .btn { flex: 1 1 100%; }
+  .trust { margin-top: 36px; }
+}
