@@ -60,11 +60,11 @@ a { color: inherit; text-decoration: none; }
   gap: 28px;
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--ink-soft);
+  color: var(--ink);
 }
 
-.nav-links a { transition: color 150ms ease; }
-.nav-links a:hover { color: var(--ink); }
+.nav-links a { transition: opacity 150ms ease; }
+.nav-links a:hover { opacity: 0.75; }
 
 /* ---------- Espacio para el logo ---------- */
 
@@ -79,10 +79,11 @@ a { color: inherit; text-decoration: none; }
 }
 
 .logo-slot--sm {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  font-size: 0.6rem;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+  border-radius: 12px;
+  font-size: 0.55rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -90,6 +91,7 @@ a { color: inherit; text-decoration: none; }
 .logo-slot--lg {
   width: 112px;
   height: 112px;
+  padding: 14px;
   border-radius: 24px;
   gap: 6px;
   align-content: center;
@@ -123,8 +125,9 @@ a { color: inherit; text-decoration: none; }
   inset: 0;
   z-index: -1;
   background-image:
-    linear-gradient(100deg, rgb(4 14 26 / 0.94) 0%, rgb(5 20 38 / 0.82) 42%, rgb(8 32 58 / 0.45) 100%),
-    linear-gradient(to top, rgb(6 18 31 / 0.9) 0%, transparent 35%),
+    linear-gradient(100deg, rgb(4 14 26 / 0.86) 0%, rgb(5 20 38 / 0.66) 42%, rgb(8 32 58 / 0.22) 100%),
+    linear-gradient(to top, rgb(6 18 31 / 0.75) 0%, transparent 35%),
+    linear-gradient(to bottom, rgb(4 14 26 / 0.72) 0, transparent 160px),
     url("assets/img/hero-ac.jpg");
   background-size: cover;
   background-position: center 30%;
@@ -144,15 +147,6 @@ a { color: inherit; text-decoration: none; }
   max-width: 640px;
 }
 
-.eyebrow {
-  margin: 0 0 16px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--ice);
-}
-
 h1 {
   margin: 0;
   font-size: clamp(2.6rem, 7vw, 5rem);
@@ -162,12 +156,7 @@ h1 {
   text-wrap: balance;
 }
 
-.accent {
-  background: linear-gradient(120deg, #ffffff 0%, var(--ice) 55%, var(--ice-strong) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
+.accent { color: var(--ice); }
 
 .lead {
   margin: 24px 0 0;
@@ -230,7 +219,7 @@ h1 {
 .btn--primary {
   background: var(--ice);
   color: #04203a;
-  box-shadow: 0 8px 30px -8px rgb(127 211 255 / 0.6);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 6px 16px -6px rgb(0 0 0 / 0.45);
 }
 
 .btn--ghost {
@@ -319,7 +308,8 @@ h1 {
 
   .hero-bg {
     background-image:
-      linear-gradient(to top, rgb(4 14 26 / 0.97) 0%, rgb(5 20 38 / 0.88) 45%, rgb(8 32 58 / 0.62) 75%, rgb(8 32 58 / 0.4) 100%),
+      linear-gradient(to top, rgb(4 14 26 / 0.88) 0%, rgb(5 20 38 / 0.78) 45%, rgb(8 32 58 / 0.5) 75%, rgb(8 32 58 / 0.3) 100%),
+      linear-gradient(to bottom, rgb(4 14 26 / 0.72) 0, transparent 120px),
       url("assets/img/hero-ac-mobile.jpg");
     background-position: 40% top;
   }
