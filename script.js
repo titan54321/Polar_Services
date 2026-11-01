@@ -172,6 +172,57 @@ fetch("assets/trabajos/fotos.json", { cache: "no-cache" })
     revealPassed();
   });
 
+// ---------- Marcas ----------
+
+document.querySelectorAll(".brand").forEach((li, k) => li.style.setProperty("--k", k % 4));
+
+// ---------- Redes sociales: enlaces desde assets/redes.json ----------
+
+const ICONS = {
+  facebook: '<path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/>',
+  instagram: '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8"/>',
+  tiktok: '<path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.5 2.6 2.4 4.4 5 4.6"/>',
+  youtube: '<rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/>',
+};
+const NAMES = { facebook: "Facebook", instagram: "Instagram", tiktok: "TikTok", youtube: "YouTube" };
+const socialSection = document.querySelector("[data-social]");
+const socialList = document.getElementById("social-list");
+
+function addSocial({ red, usuario, url }, k, sample) {
+  const li = document.createElement("li");
+  const a = document.createElement("a");
+  a.style.setProperty("--k", k);
+  if (sample) {
+    a.classList.add("is-sample");
+    a.setAttribute("aria-disabled", "true");
+  } else {
+    Object.assign(a, { href: url, target: "_blank", rel: "noopener" });
+  }
+  a.innerHTML = `<svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">${ICONS[red] || ICONS.facebook}</svg>
+    <span class="social-name"></span>
+    <svg class="arrow" viewBox="0 0 24 24" width="40" height="40" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>`;
+  const name = a.querySelector(".social-name");
+  name.textContent = NAMES[red] || red;
+  const user = document.createElement("span");
+  user.className = "social-user";
+  user.textContent = sample ? "Tu enlace aquí" : usuario || url.replace(/^https?:\/\/(www\.)?/, "");
+  a.querySelector(".arrow").before(user);
+  li.append(a);
+  socialList.append(li);
+  watch(li);
+}
+
+fetch("assets/redes.json", { cache: "no-cache" })
+  .then((r) => (r.ok ? r.json() : { redes: [] }))
+  .catch(() => ({ redes: [] }))
+  .then(({ redes = [] }) => {
+    const live = redes.filter((r) => r.url);
+    if (live.length) live.forEach((r, k) => addSocial(r, k, false));
+    else if (isLocal) redes.forEach((r, k) => addSocial(r, k, true));
+    else socialSection.classList.add("is-hidden");
+    revealPassed();
+  });
+
 // ---------- Equipo: capacidad según el cuarto y la medida ----------
 
 // Orientativo para clima caluroso; cocina y local suben un paso por el calor extra
@@ -248,7 +299,7 @@ stages.forEach((stage) => {
 
 document.querySelectorAll(".extras-list .line").forEach((li, k) => li.style.setProperty("--k", k));
 
-const risers = [...document.querySelectorAll(".rise, .extras-list .line")];
+const risers = [...document.querySelectorAll(".rise, .extras-list .line, .brand")];
 const reveal = (el) => el.classList.add("is-in");
 
 // Muestra todo lo que ya está en pantalla o arriba de ella. Es el respaldo por si el

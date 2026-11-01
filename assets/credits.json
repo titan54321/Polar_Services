@@ -1,50 +1,26 @@
 [
- {
-  "file": "assets/img/la-piedad-plaza.jpg",
-  "media": "image",
-  "ref": "commons:18229698",
-  "title": "Centro LaPiedad",
-  "creator": "AntonioRz",
-  "creatorUrl": null,
-  "date": "2010",
-  "license": "CC BY-SA 4.0",
-  "licenseCode": "by-sa",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "creditRequired": true,
-  "page": "https://commons.wikimedia.org/wiki/File:Centro_LaPiedad.JPG",
-  "via": "Wikimedia Commons",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Centro_LaPiedad.JPG/1920px-Centro_LaPiedad.JPG",
-  "width": 1920,
-  "height": 1440,
-  "bytes": 622083,
-  "credit": "\"Centro LaPiedad\" by AntonioRz, CC BY-SA 4.0, via Wikimedia Commons",
-  "notes": [
-   "Share-alike: an altered version (recoloured, combined with other pictures) must be shared under the same licence."
-  ],
-  "saved": "2026-10-31T23:21:50.369Z"
- },
- {
-  "file": "assets/img/la-piedad-santuario.jpg",
-  "media": "image",
-  "ref": "commons:18229620",
-  "title": "Señor de la Piedad (1)",
-  "creator": "AntonioRz",
-  "creatorUrl": null,
-  "date": "2009",
-  "license": "CC BY-SA 4.0",
-  "licenseCode": "by-sa",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "creditRequired": true,
-  "page": "https://commons.wikimedia.org/wiki/File:Se%C3%B1or_de_la_Piedad_(1).JPG",
-  "via": "Wikimedia Commons",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Se%C3%B1or_de_la_Piedad_%281%29.JPG/1920px-Se%C3%B1or_de_la_Piedad_%281%29.JPG",
-  "width": 1920,
-  "height": 1440,
-  "bytes": 836045,
-  "credit": "\"Señor de la Piedad (1)\" by AntonioRz, CC BY-SA 4.0, via Wikimedia Commons",
-  "notes": [
-   "Share-alike: an altered version (recoloured, combined with other pictures) must be shared under the same licence."
-  ],
-  "saved": "2026-10-31T23:21:51.416Z"
- }
+  {
+    "file": "assets/img/la-piedad-plaza.jpg",
+    "media": "image",
+    "ref": "commons:18229698",
+    "title": "Centro LaPiedad",
+    "creator": "AntonioRz",
+    "creatorUrl": null,
+    "date": "2010",
+    "license": "CC BY-SA 4.0",
+    "licenseCode": "by-sa",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "creditRequired": true,
+    "page": "https://commons.wikimedia.org/wiki/File:Centro_LaPiedad.JPG",
+    "via": "Wikimedia Commons",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Centro_LaPiedad.JPG/1920px-Centro_LaPiedad.JPG",
+    "width": 1920,
+    "height": 1440,
+    "bytes": 622083,
+    "credit": "\"Centro LaPiedad\" by AntonioRz, CC BY-SA 4.0, via Wikimedia Commons",
+    "notes": [
+      "Share-alike: an altered version (recoloured, combined with other pictures) must be shared under the same licence."
+    ],
+    "saved": "2026-10-31T23:21:50.369Z"
+  }
 ]

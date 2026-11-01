@@ -25,5 +25,5 @@ Abre http://localhost:5173
 
 ## Créditos
 
-- "Señor de la Piedad (1)" y "Centro LaPiedad" de AntonioRz, CC BY-SA 4.0, vía Wikimedia Commons (`assets/credits.json`).
+- "Centro LaPiedad" de AntonioRz, CC BY-SA 4.0, vía Wikimedia Commons (`assets/credits.json`).
 - Fotos de apoyo de Unsplash y Pexels (licencias Unsplash y Pexels). El origen de cada una está guardado dentro del archivo.

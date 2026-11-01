@@ -40,7 +40,7 @@ A local technician in La Piedad, Michoacán and nearby towns who answers fast, q
 ## Evidence on Hand
 
 - Phone/WhatsApp number (above).
-- Hero photo: a stock wall-mounted split unit from Unsplash (`assets/img/hero-ac.jpg`), not Polar's own work.
+- Hero photos: stock bedroom with a minisplit and a minisplit close-up from Pexels (`assets/img/hero-recamara.jpg`, `assets/img/hero-minisplit.jpg`), not Polar's own work.
 - Owner will provide real photos of their installations later; until then imagery is placeholder and must not be presented as Polar's own work.
 - No testimonials, reviews, customer counts, prices or certifications exist. Do not invent them.
 
