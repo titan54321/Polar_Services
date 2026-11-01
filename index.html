@@ -31,8 +31,9 @@
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
 
-      <ul class="links" id="menu">
+      <ul class="links">
         <li><a href="#servicios">Servicios</a></li>
+        <li data-nav="trabajos"><a href="#trabajos">Trabajos</a></li>
         <li><a href="#equipo">Equipo</a></li>
         <li><a href="#cotizar">Cómo cotizar</a></li>
         <li><a href="#contacto">Contacto</a></li>
@@ -51,73 +52,128 @@
     </div>
   </header>
 
+  <!-- Barra fija: arriba en escritorio, abajo en el teléfono (a la mano del pulgar) -->
+  <div class="bar" id="bar" aria-label="Accesos rápidos">
+    <a href="#inicio" class="bar-name">Polar</a>
+    <nav class="bar-links" aria-label="Secciones">
+      <a href="#servicios">Servicios</a>
+      <a href="#trabajos" data-nav="trabajos">Trabajos</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#cotizar">Cómo cotizar</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="bar-menu menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+    <a class="btn btn--accent bar-action" href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20un%20servicio%20de%20aire%20acondicionado." target="_blank" rel="noopener">
+      Cotizar por WhatsApp<span class="sr-only"> (se abre en WhatsApp)</span>
+    </a>
+  </div>
+
+  <!-- Menú a pantalla completa -->
+  <div class="menu-panel" id="menu" role="dialog" aria-modal="true" aria-label="Menú" hidden>
+    <div class="menu-top">
+      <span class="menu-name">Polar</span>
+      <button class="menu-close" type="button">Cerrar</button>
+    </div>
+    <ul class="menu-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li data-nav="trabajos"><a href="#trabajos">Trabajos</a></li>
+      <li><a href="#equipo">Equipo</a></li>
+      <li><a href="#cotizar">Cómo cotizar</a></li>
+      <li><a href="#otros">Otros equipos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="menu-foot">
+      <a class="menu-tel" href="tel:+523521563476">352 156 3476</a>
+      <a class="btn btn--accent" href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20un%20servicio%20de%20aire%20acondicionado." target="_blank" rel="noopener">
+        Cotizar por WhatsApp<span class="sr-only"> (se abre en WhatsApp)</span>
+      </a>
+    </div>
+  </div>
+
   <main id="contenido">
-    <!-- ---------- Servicios: índice en tres columnas ---------- -->
+    <!-- ---------- Servicios: la foto se queda, los servicios pasan ---------- -->
     <section class="section services" id="servicios" aria-labelledby="servicios-titulo">
-      <h2 id="servicios-titulo" class="small-head rise">Servicios</h2>
+      <div class="services-head">
+        <h2 id="servicios-titulo" class="head rise">Servicios</h2>
+        <p class="rise">Minisplit y de ventana, de cualquier marca, en tu casa o en tu negocio.</p>
+      </div>
 
-      <div class="index">
-        <div class="group rise">
-          <h3><a href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20la%20instalaci%C3%B3n%20de%20un%20aire%20acondicionado." target="_blank" rel="noopener">Instalación</a></h3>
-          <ul>
-            <li tabindex="0" data-note="Equipos de muro, de una a dos toneladas, en recámaras, salas y locales.">Minisplit</li>
-            <li tabindex="0" data-note="Colocación en ventana o en muro, con su marco y sellado.">De ventana</li>
-            <li tabindex="0" data-note="Instalamos el equipo que compraste o te decimos cuál conviene.">Equipo nuevo</li>
-            <li tabindex="0" data-note="Retiramos el equipo viejo e instalamos el nuevo en el mismo lugar.">Cambio de equipo</li>
-            <li tabindex="0" data-note="Tubería de cobre con su aislamiento, del equipo a la condensadora.">Tubería y aislamiento</li>
-            <li tabindex="0" data-note="Base o soportes firmes para la unidad exterior.">Soportes y base</li>
-            <li tabindex="0" data-note="Antes de irnos probamos que el equipo enfríe bien.">Prueba de enfriamiento</li>
+      <div class="story">
+        <figure class="story-media">
+          <div class="story-pics">
+            <img class="is-on" src="assets/img/servicio-instalacion.jpg" width="1200" height="900" loading="lazy"
+                 alt="Dos técnicos trabajando junto a unidades de aire acondicionado en una azotea">
+            <img src="assets/img/servicio-mantenimiento.jpg" width="1200" height="900" loading="lazy"
+                 alt="Técnico conectando un manómetro a una unidad exterior de aire acondicionado">
+            <img src="assets/img/servicio-reparacion.jpg" width="1200" height="900" loading="lazy"
+                 alt="Unidad exterior de aire acondicionado con el sol de la tarde">
+          </div>
+          <figcaption class="story-count" aria-hidden="true">Instalación, 1 de 3</figcaption>
+        </figure>
+
+        <ol class="story-list">
+        <li class="story-item" data-i="0">
+          <img class="story-inline" src="assets/img/servicio-instalacion.jpg" width="1200" height="900" loading="lazy" alt="Dos técnicos trabajando junto a unidades de aire acondicionado en una azotea">
+          <h3 class="story-title">Instalación</h3>
+          <p class="story-sum">Dejamos tu equipo nuevo instalado y enfriando, con garantía.</p>
+          <ul class="story-points">
+              <li>Minisplit</li>
+              <li>De ventana</li>
+              <li>Equipo nuevo o cambio del viejo</li>
+              <li>Tubería de cobre y aislamiento</li>
+              <li>Soportes y base para la unidad exterior</li>
+              <li>Prueba de enfriamiento antes de irnos</li>
           </ul>
-          <p class="sum">Dejamos tu equipo nuevo instalado y enfriando, con garantía.</p>
-        </div>
-
-        <div class="group rise">
-          <h3><a href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20el%20mantenimiento%20de%20un%20aire%20acondicionado." target="_blank" rel="noopener">Mantenimiento</a></h3>
-          <ul>
-            <li tabindex="0" data-note="Filtros limpios: el aire sale más frío y más limpio.">Limpieza de filtros</li>
-            <li tabindex="0" data-note="Lavado de los serpentines de la unidad interior y exterior.">Lavado de serpentines</li>
-            <li tabindex="0" data-note="Revisamos la presión del gas refrigerante con manómetros.">Revisión de gas</li>
-            <li tabindex="0" data-note="Destapamos y limpiamos la salida del agua para que no gotee.">Drenaje</li>
-            <li tabindex="0" data-note="Revisamos cables, conexiones y el capacitor.">Revisión eléctrica</li>
-            <li tabindex="0" data-note="Para casas y negocios que usan el aire todo el día.">Equipos de uso diario</li>
+          <a class="story-link" href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20la%20instalaci%C3%B3n%20de%20un%20aire%20acondicionado." target="_blank" rel="noopener">Cotizar instalación <svg class="arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </li>
+        <li class="story-item" data-i="1">
+          <img class="story-inline" src="assets/img/servicio-mantenimiento.jpg" width="1200" height="900" loading="lazy" alt="Técnico conectando un manómetro a una unidad exterior de aire acondicionado">
+          <h3 class="story-title">Mantenimiento</h3>
+          <p class="story-sum">Un equipo limpio enfría mejor y no te falla cuando más calor hace.</p>
+          <ul class="story-points">
+              <li>Limpieza de filtros</li>
+              <li>Lavado de serpentines</li>
+              <li>Revisión del gas con manómetros</li>
+              <li>Limpieza del drenaje</li>
+              <li>Revisión eléctrica y del capacitor</li>
           </ul>
-          <p class="sum">Un equipo limpio enfría mejor y no te falla cuando más calor hace.</p>
-        </div>
-
-        <div class="group rise">
-          <h3><a href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20la%20reparaci%C3%B3n%20de%20un%20aire%20acondicionado." target="_blank" rel="noopener">Reparación</a></h3>
-          <ul>
-            <li tabindex="0" data-note="Revisamos gas, filtros y compresor para encontrar la causa.">No enfría</li>
-            <li tabindex="0" data-note="Casi siempre es el drenaje o la instalación; lo corregimos.">Gotea agua</li>
-            <li tabindex="0" data-note="Ruidos del ventilador, del compresor o de piezas sueltas.">Hace ruido</li>
-            <li tabindex="0" data-note="Revisamos la parte eléctrica y la tarjeta del equipo.">No enciende</li>
-            <li tabindex="0" data-note="Suele ser suciedad acumulada; se resuelve con limpieza.">Huele mal</li>
-            <li tabindex="0" data-note="Puede ser el capacitor, el gas o un sensor.">Se apaga solo</li>
+          <a class="story-link" href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20el%20mantenimiento%20de%20un%20aire%20acondicionado." target="_blank" rel="noopener">Cotizar mantenimiento <svg class="arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </li>
+        <li class="story-item" data-i="2">
+          <img class="story-inline" src="assets/img/servicio-reparacion.jpg" width="1200" height="900" loading="lazy" alt="Unidad exterior de aire acondicionado con el sol de la tarde">
+          <h3 class="story-title">Reparación</h3>
+          <p class="story-sum">Te decimos qué tiene tu equipo y cuánto cuesta antes de repararlo.</p>
+          <ul class="story-points">
+              <li>No enfría</li>
+              <li>Gotea agua</li>
+              <li>Hace ruido</li>
+              <li>No enciende</li>
+              <li>Huele mal</li>
+              <li>Se apaga solo</li>
           </ul>
-          <p class="sum">Te decimos qué tiene tu equipo y cuánto cuesta antes de repararlo.</p>
-        </div>
-
-        <p class="note" aria-live="polite" id="service-note">Equipos de muro, de una a dos toneladas, en recámaras, salas y locales.</p>
+          <a class="story-link" href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20la%20reparaci%C3%B3n%20de%20un%20aire%20acondicionado." target="_blank" rel="noopener">Cotizar reparación <svg class="arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </li>
+        </ol>
       </div>
     </section>
 
-    <!-- ---------- Fotos del oficio ---------- -->
-    <section class="photo-run" aria-label="Trabajo en equipos de aire acondicionado">
-      <figure class="rise">
-        <img src="assets/img/servicio-mantenimiento.jpg" width="1200" height="900" loading="lazy"
-             alt="Técnico conectando un manómetro a una unidad exterior de aire acondicionado">
-      </figure>
-      <figure class="rise">
-        <img src="assets/img/servicio-reparacion.jpg" width="1200" height="900" loading="lazy"
-             alt="Unidad exterior de aire acondicionado con el sol de la tarde">
-      </figure>
+    <!-- ---------- Trabajos realizados: galería ----------
+         Las fotos se agregan en assets/trabajos/fotos.json (ver assets/trabajos/LEEME.md).
+         Si la lista está vacía, la sección no se muestra en el sitio publicado. -->
+    <section class="section works" id="trabajos" aria-labelledby="trabajos-titulo" data-gallery>
+      <div class="works-head">
+        <h2 id="trabajos-titulo" class="head rise">Trabajos realizados</h2>
+        <p class="rise">Instalaciones y mantenimientos que hemos hecho en La Piedad y alrededores.</p>
+      </div>
+
+      <ul class="works-grid" id="works-grid" aria-label="Fotos de trabajos realizados"></ul>
     </section>
 
     <!-- ---------- Equipo: lo vivo ---------- -->
     <section class="section sizer" id="equipo" aria-labelledby="equipo-titulo">
-      <div class="sizer-copy">
-        <h2 id="equipo-titulo" class="head rise">¿Qué equipo necesitas?</h2>
+      <h2 id="equipo-titulo" class="head sizer-title rise">¿Qué equipo necesitas?</h2>
 
+      <div class="sizer-copy">
         <form class="sizer-form rise" id="sizer" aria-label="Calcular el equipo">
           <fieldset>
             <legend>El cuarto</legend>
@@ -142,7 +198,8 @@
       </div>
 
       <div class="sizer-result" aria-live="polite">
-        <p class="result-big" id="result-big">1.5&nbsp;t</p>
+        <p class="result-big"><span class="result-num" id="result-big">1.5&nbsp;t</span></p>
+        <div class="meter" aria-hidden="true"><i class="is-on"></i><i class="is-on"></i><i></i><i></i></div>
         <p class="result-line" id="result-line">Minisplit de 1.5 toneladas, 18,000 BTU</p>
         <p class="result-note">Cálculo orientativo para el calor de La Piedad. En la visita confirmamos la medida.</p>
         <a class="btn btn--accent" id="sizer-btn" href="https://wa.me/523521563476?text=Hola%20Polar%2C%20me%20gustar%C3%ADa%20cotizar%20la%20instalaci%C3%B3n%20de%20un%20aire%20acondicionado." target="_blank" rel="noopener">
@@ -171,7 +228,7 @@
           <div class="stage-body" id="stage-2" hidden>
             <h3>Manda una foto</h3>
             <p>Una foto del equipo o del lugar donde lo quieres nos ayuda a cotizar más exacto.</p>
-            <img src="assets/img/confort-termostato.jpg" width="1400" height="933" loading="lazy"
+            <img class="stage-img" src="assets/img/confort-termostato.jpg" width="1400" height="933" loading="lazy"
                  alt="Mano ajustando el control de un equipo en la pared">
           </div>
         </li>
@@ -187,11 +244,25 @@
           <div class="stage-body" id="stage-4" hidden>
             <h3>Vamos a tu domicilio</h3>
             <p>Llegamos a tu casa o negocio en La Piedad y alrededores, el día que te acomode.</p>
-            <img src="assets/img/servicio-instalacion.jpg" width="1200" height="900" loading="lazy"
+            <img class="stage-img" src="assets/img/servicio-instalacion.jpg" width="1200" height="900" loading="lazy"
                  alt="Dos técnicos trabajando junto a unidades de aire acondicionado en una azotea">
           </div>
         </li>
       </ol>
+    </section>
+
+    <!-- ---------- Otros equipos ---------- -->
+    <section class="section extras" id="otros" aria-labelledby="otros-titulo">
+      <div class="extras-head">
+        <h2 id="otros-titulo" class="small-head rise">También reparamos</h2>
+        <p class="rise">Además del aire acondicionado, reparamos otros equipos de tu casa o negocio.</p>
+      </div>
+      <ul class="extras-list">
+        <li class="line"><a href="https://wa.me/523521563476?text=Hola%20Polar%2C%20necesito%20reparar%20mi%20lavadora." target="_blank" rel="noopener"><span class="extra-word">Lavadoras</span><svg class="arrow" viewBox="0 0 24 24" width="40" height="40" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="sr-only"> (se abre en WhatsApp)</span></a></li>
+        <li class="line"><a href="https://wa.me/523521563476?text=Hola%20Polar%2C%20necesito%20reparar%20mi%20refrigerador." target="_blank" rel="noopener"><span class="extra-word">Refrigeradores</span><svg class="arrow" viewBox="0 0 24 24" width="40" height="40" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="sr-only"> (se abre en WhatsApp)</span></a></li>
+        <li class="line"><a href="https://wa.me/523521563476?text=Hola%20Polar%2C%20necesito%20reparar%20mi%20secadora." target="_blank" rel="noopener"><span class="extra-word">Secadoras</span><svg class="arrow" viewBox="0 0 24 24" width="40" height="40" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="sr-only"> (se abre en WhatsApp)</span></a></li>
+        <li class="line"><a href="https://wa.me/523521563476?text=Hola%20Polar%2C%20necesito%20reparar%20un%20congelador." target="_blank" rel="noopener"><span class="extra-word">Congeladores</span><svg class="arrow" viewBox="0 0 24 24" width="40" height="40" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="sr-only"> (se abre en WhatsApp)</span></a></li>
+      </ul>
     </section>
 
     <!-- ---------- Por qué Polar ---------- -->
@@ -269,6 +340,7 @@
         <li><a href="tel:+523521563476">352 156 3476</a></li>
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#otros">Otros equipos</a></li>
         <li><a href="#inicio">Inicio</a></li>
       </ul>
     </div>
